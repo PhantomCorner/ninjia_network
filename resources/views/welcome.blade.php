@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
     <head>
         <meta charset="UTF-8">
@@ -10,7 +10,7 @@
     <body>
         <h1>Welcome to the Ninja Network</h1>
         <p>click the button below to get started</p>
-        <a hrer="">
+        <a href="/ninjas">
             <button> Find Ninjas</button>
         </a>
     </body>
