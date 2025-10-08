@@ -4,10 +4,12 @@
     <ul>
         @foreach ($ninjas as $ninja)
             <li>
-                <p> {{ $ninja['name'] }}- {{ $ninja['age'] }} years old</p>
-                <a href="/ninjas/{{ $ninja['id'] }}">
-                    view details
-                </a>
+                {{-- pass href content to card compoent --}}
+                <x-card href="/ninjas/{{ $ninja['id'] }}" :highlight="true" var="passing value">
+                    <h3> {{ $ninja['name'] }}</h3>
+
+                </x-card>
+
             </li>
         @endforeach
     </ul>
