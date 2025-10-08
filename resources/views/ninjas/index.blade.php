@@ -9,11 +9,17 @@
     </head>
 
     <body>
+        {{--  $ variables is passed from the route --}}
+        <p>{{ $greetings }} Ninjas</p>
         <p>All Ninjas will be listed here</p>
         <ul>
-            <li>Ninja 1</li>
-            <li>Ninja 2</li>
-            <li>Ninja 3</li>
+            @foreach ($ninjas as $ninja)
+                <li>
+                    <a href="/ninjas/{{ $ninja['id'] }}">
+                        {{ $ninja['name'] }} - {{ $ninja['age'] }} years old
+                    </a>
+                </li>
+            @endforeach
         </ul>
     </body>
 
