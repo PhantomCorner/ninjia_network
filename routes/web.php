@@ -26,6 +26,12 @@ Route::get('/ninjas', function () {
         ],
     ]);
 });
+Route::get('/ninjas/create', function () {
+    // if accessing /ninjas/1
+    // pass id = 1 to the view so view can access it
+    return view('ninjas.create');
+});
+
 Route::get('/ninjas/{id}', function ($id) {
     // if accessing /ninjas/1
     // pass id = 1 to the view so view can access it
